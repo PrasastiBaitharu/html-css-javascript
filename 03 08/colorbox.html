@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box" style="border: 3px solid black; height: 80vh; width: 100%; "></div>
+    <p>Background colors:</p>
+    <button onclick="red()">RED</button>
+    <button onclick="blue()">BLUE</button>
+    <button onclick="green()">GREEN</button>
+    <button onclick="yellow()">YELLOW</button>
+    <button onclick="pink()">PINK</button>
+    <button onclick="aqua()">AQUA</button>
+    <button onclick="black()">BLACK</button>
+</body>
+<script>
+    const red = () => {
+        document.getElementById("box").style.backgroundColor="red";
+    }
+    const blue = () => {
+        document.getElementById("box").style.backgroundColor="blue";
+    }
+    const green = () => {
+        document.getElementById("box").style.backgroundColor="green";
+    }
+    const yellow = () => {
+        document.getElementById("box").style.backgroundColor="yellow";
+    }
+    const pink = () => {
+        document.getElementById("box").style.backgroundColor="pink";
+    }
+    const aqua = () => {
+        document.getElementById("box").style.backgroundColor="aqua";
+    }
+    const black = () => {
+        document.getElementById("box").style.backgroundColor="black";
+    }
+</script>
+</html>
