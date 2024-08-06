@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="count.css">
+</head>
+<body>
+    
+    <form class="sum">
+        <label for="num">Enter Number:</label>
+        <input type="text" class="first" id="num"/><br />
+        Number of digits are
+        <input type="text" class="ans" /><br />
+        <button onclick="count()">COUNT</button>
+        <button>CLEAR</button>
+    </form>
+</body>
+<script>
+    function count(){
+        p=document.getElementById("num").value 
+        n=parseInt(p);
+        c=0;
+        while(n>0){
+            c++
+            n=parseInt(n/10);
+        }
+        alert("Number of digits is " + c);
+    }
+</script>
+</html>
