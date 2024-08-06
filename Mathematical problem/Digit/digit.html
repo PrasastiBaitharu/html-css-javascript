@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="digit.css">
+</head>
+<body>
+    
+    <form class="sum">
+        <label for="num"> Enter 3 Digit Number:</label>
+        <input type="text" class="first" id="num"/><br />
+        
+        <input type="text" class="ans" /><br />
+        <button onclick="first()">FIRST DIGIT</button>
+        <button onclick="second()">SECOND DIGIT</button>
+        <button onclick="third()">THIRD DIGIT</button>
+        <button class="clear">CLEAR</button>
+       </form>
+</body>
+<script>
+    function first(){
+        p=document.getElementById("num").value 
+        n=parseInt(p);
+        a=parseInt(n/10);
+        b=parseInt(a/10);
+        alert("First digit is " + b);
+    }
+    function second(){
+        p=document.getElementById("num").value 
+        n=parseInt(p);
+        a=parseInt(n/10);
+        b=a%10;
+        alert("Second digit is " + b);
+    }
+    function third(){
+        p=document.getElementById("num").value 
+        n=parseInt(p);
+        a=n%10;
+        alert("Second digit is " + a);
+    }
+</script>
+</html>
