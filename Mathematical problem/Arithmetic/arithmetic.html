@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="arithmetic.css">
+</head>
+<body>
+    <form class="sum">
+        <label for="num1"> Enter first number:</label>
+        <input type="text" class="first" id="num1"/><br />
+        <label for="num2">Enter second number:</label>
+        <input type="text" class="second" id="num2"/><br />
+        <input type="text" class="ans" /><br />
+        <button onclick="sum()">SUM</button>
+        <button onclick="subs()">SUBS</button>
+        <button onclick="product()">PRODUCT</button>
+        <button onclick="div()">DIVISION</button><br>
+        <button onclick="modulos()">MODULOS</button>
+        <button>INCREMENT</button>
+        <button>DECREMENT</button>
+        <button>CLEAR</button>
+      </form>
+</body>
+<script>
+    function sum(){
+      a = document.getElementById("num1").value 
+      b = document.getElementById("num2").value
+      s = parseInt(a) + parseInt(b)
+      alert("sum is " + s)
+    }
+
+    function subs(){
+      a = document.getElementById("num1").value 
+      b = document.getElementById("num2").value
+      s = parseInt(a) - parseInt(b)
+      alert("Substraction is " + s)
+    }
+
+    function product(){
+      a = document.getElementById("num1").value 
+      b = document.getElementById("num2").value
+      s = parseInt(a) * parseInt(b)
+      alert("Product is " + s)
+    }
+
+    function div(){
+      a = document.getElementById("num1").value 
+      b = document.getElementById("num2").value
+      s = parseInt(a) / parseInt(b)
+      alert("Division is " + s)
+    }
+
+    function modulos(){
+      a = document.getElementById("num1").value 
+      b = document.getElementById("num2").value
+      s = parseInt(a) % parseInt(b)
+      alert("Modulos is " + s)
+    }
+</script>
+</html>
