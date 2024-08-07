@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Hello</h1>
+    <p id="para">My name is </p>
+    <button onclick="change()" id="button">Expand</button>
+</body>
+<script>
+    const change = () => { 
+        let a  = document.getElementById("button").innerHTML
+        if(a == "Expand"){
+            document.getElementById("heading").innerHTML = "Hello world!!!"
+            document.getElementById("para").innerHTML = "My name is Prasasti"
+            document.getElementById("button").innerHTML = "Reduce"
+        }else{
+            document.getElementById("heading").innerHTML = "Hello "
+            document.getElementById("para").innerHTML = "My name is "
+            document.getElementById("button").innerHTML = "Expand"
+        }
+    }
+
+</script>
+</html>
