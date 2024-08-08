@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="voting.css">
+</head>
+<body>
+    <form class="sum">
+        <label for="age"> Enter Age:</label>
+        <input type="text" class="first" id="age"/><br />
+        Eligible to VOTE/NOT
+        <input type="text" class="ans" /><br />
+        <button onclick="voting()">CHECK</button>
+        <button>CLEAR</button>
+    </form> 
+</body>
+<script>
+    function voting(){
+        p=document.getElementById("age").value 
+        n=parseInt(p);
+        if(n>=18){
+            alert("Eligible to vote")
+        }else{
+            alert("Not Eligible to vote")
+        }
+    }
+</script>
+</html>
