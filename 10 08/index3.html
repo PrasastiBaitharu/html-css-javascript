@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div
+      class="container"
+      style="
+        border: 2px solid black;
+        width: 800px;
+        height: 200px;
+        margin: 100px auto;
+      "
+    >
+      <div
+        id="textbox"
+        style="
+          width: 700px;
+          height: 30px;
+          border: 2px solid black;
+          margin-bottom: 10px;
+          margin-top: 50px;
+          margin-left: 50px;
+        "
+      ></div>
+    <button onclick="zero()" style="margin-left: 250px;">0</button>
+    <button onclick="one()" >1</button>
+    <button onclick="two()" >2</button>
+    <button onclick="three()" >3</button>
+    <button onclick="four()" >4</button>
+    <button onclick="five()" >5</button>
+    <button onclick="six()" >6</button>
+    <button onclick="seven()" >7</button>
+    <button onclick="eight()" >8</button>
+    <button onclick="nine()" >9</button>
+    <button onclick="clearData()" >C</button>
+    <button onclick="word()" id="word">Word</button>
+</body>
+<script>
+    let data = ""
+    let text = ""
+    
+    function clearData() {
+        document.getElementById("textbox").innerHTML = data = "";
+    }
+    const word = () => {
+        document.getElementById("textbox").innerHTML = text;
+    }
+    const zero = () => {
+        data = data + "0";
+        document.getElementById("textbox").innerHTML = data;   
+        if(data == "0"){
+            data = "";
+        }
+    }
+    const one = () => {
+        data = data + "1";
+        document.getElementById("textbox").innerHTML = data;
+        text = text + " One "
+    }
+    const two = () => {
+        data = data + "2";
+        document.getElementById("textbox").innerHTML = data;
+        text = text + " Two "
+    }
+    const three = () => {
+        data = data + "3";
+        document.getElementById("textbox").innerHTML = data;
+        text = text + " Three "
+    }
+    const four = () => {
+        data = data + "4";
+        document.getElementById("textbox").innerHTML = data;
+        text = text + " Four "
+    }
+    const five = () => {
+        data = data + "5";
+        document.getElementById("textbox").innerHTML = data;
+        text = text + " Five "
+    }
+    const six = () => {
+        data = data + "6";
+        document.getElementById("textbox").innerHTML = data;
+        text = text + " Six "
+    }
+    const seven = () => {
+        data = data + "7";
+        document.getElementById("textbox").innerHTML = data;
+        text = text + " Seven "
+    }
+    const eight = () => {
+        data = data + "8";
+        document.getElementById("textbox").innerHTML = data;
+        text = text + " Eight "
+    }
+    const nine = () => {
+        data = data + "9";
+        document.getElementById("textbox").innerHTML = data;
+        text = text + " Nine "
+    }
+</script>
+</html>
