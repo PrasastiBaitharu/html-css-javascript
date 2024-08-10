@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      class="container"
+      style="
+        border: 2px solid black;
+        width: 800px;
+        height: 200px;
+        margin: 100px auto;
+      "
+    >
+      <div
+        id="textbox"
+        style="
+          width: 700px;
+          height: 30px;
+          border: 2px solid black;
+          margin-bottom: 10px;
+          margin-top: 50px;
+          margin-left: 50px;
+        "
+      ></div>
+      <button onclick="zero()" style="margin-left: 250px">0</button>
+      <button onclick="one()">1</button>
+      <button onclick="two()">2</button>
+      <button onclick="three()">3</button>
+      <button onclick="four()">4</button>
+      <button onclick="five()">5</button>
+      <button onclick="six()">6</button>
+      <button onclick="seven()">7</button>
+      <button onclick="eight()">8</button>
+      <button onclick="nine()">9</button>
+    </div>
+  </body>
+  <script>
+    const zero = () => {
+      document.getElementById("textbox").innerHTML = "Zero";
+    };
+    const one = () => {
+      document.getElementById("textbox").innerHTML = "One";
+    };
+    const two = () => {
+      document.getElementById("textbox").innerHTML = "Two";
+    };
+    const three = () => {
+      document.getElementById("textbox").innerHTML = "Three";
+    };
+    const four = () => {
+      document.getElementById("textbox").innerHTML = "Four";
+    };
+    const five = () => {
+      document.getElementById("textbox").innerHTML = "Five";
+    };
+    const six = () => {
+      document.getElementById("textbox").innerHTML = "Six";
+    };
+    const seven = () => {
+      document.getElementById("textbox").innerHTML = "Seven";
+    };
+    const eight = () => {
+      document.getElementById("textbox").innerHTML = "Eight";
+    };
+    const nine = () => {
+      document.getElementById("textbox").innerHTML = "Nine";
+    };
+  </script>
+</html>
