@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="percentage.css" />
+  </head>
+  <body>
+    <form class="sum">
+      <label for="eng"> Marks of English:</label>
+      <input type="text" class="first" id="eng" /><br />
+      <label for="math">Marks of Maths:</label>
+      <input type="text" class="second" id="math" /><br />
+      <label for="cs">Marks of computer:</label>
+      <input type="text" class="third" id="cs" /><br />
+      <input type="text" class="ans" /><br />
+      <input type="text" class="ans" /><br />
+      <button onclick="total()">TOTAL</button>
+      <button onclick="perc()">PERCENT</button>
+      <button>CLEAR</button>
+    </form>
+  </body>
+  <script>
+    function total() {
+      p = document.getElementById("eng").value;
+      q = document.getElementById("math").value;
+      r = document.getElementById("cs").value;
+      eng = parseInt(p);
+      math = parseInt(q);
+      cs = parseInt(r);
+      let total = eng + math + cs;
+      alert("Total marks is " + total);
+    }
+    function perc() {
+      p = document.getElementById("eng").value;
+      q = document.getElementById("math").value;
+      r = document.getElementById("cs").value;
+      eng = parseInt(p);
+      math = parseInt(q);
+      cs = parseInt(r);
+      let total = eng + math + cs;
+      let perc = (total / 300) * 100;
+      alert("Percentage is " + perc);
+    }
+  </script>
+</html>
