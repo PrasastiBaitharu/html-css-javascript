@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="sum.css" />
+  </head>
+  <body>
+    <form class="sum">
+      <label for="num1">Enter first number:</label>
+      <input type="text"  class="first" id="num1" /><br />
+      <label for="num2">Enter second number:</label>
+      <input type="text" id="num2" /><br />
+      <input type="text"class="ans" /><br />
+      <button onclick="add()">SUM</button>
+      <button>CLEAR</button>
+    </form>
+  </body>
+  <script>
+    function add(){
+      a = document.getElementById("num1").value 
+      b = document.getElementById("num2").value
+      s = parseInt(a) + parseInt(b)
+      alert("sum is " + s)
+    }
+    
+  </script>
+</html>
