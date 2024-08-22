@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="power.css" />
+  </head>
+  <body>
+    <form class="form">
+      <label for="num1"> Enter Number:</label>
+      <input type="text" class="first" id="num1" /><br />
+      <label for="num2"> Enter Power:</label>
+      <input type="text" class="second" id="num2" /><br />
+      <input type="text" class="ans" /><br />
+      <button onclick="power()">POWER</button>
+      <button>CLEAR</button>
+    </form>
+  </body>
+  <script>
+    function power() {
+      p = document.getElementById("num1").value;
+      q = document.getElementById("num2").value;
+      a = parseInt(p);
+      b = parseInt(q);
+      let f = 1;
+      for (let i = 1; i <= b; i++) {
+        f = f * a;
+      }
+      alert(a + " power " + b + " is " + f);
+    }
+  </script>
+</html>
