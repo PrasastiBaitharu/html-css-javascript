@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="fahrenheit.css" />
+  </head>
+  <body>
+    <form class="sum">
+      <label for="temp"> Enter Celcius:</label>
+      <input type="text" class="first" id="temp" /><br />
+      Converting celcius to fahrenheit
+      <input type="text" class="ans" /><br />
+      <button onclick="fahrenheit()">FAHRENHEIT</button>
+      <button>CLEAR</button>
+    </form>
+  </body>
+  <script>
+    function fahrenheit() {
+      p = document.getElementById("temp").value;
+      c = parseInt(p);
+      f = (9 / 5) * c + 32;
+      alert("Fahrenheit is " + f);
+    }
+  </script>
+</html>
