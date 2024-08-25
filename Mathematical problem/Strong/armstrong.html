@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="armstrong.css" />
+  </head>
+  <body>
+    <form class="sum">
+      <label for="num"> Enter Number:</label>
+      <input type="text" class="first" id="num" /><br />
+      Is the number is Armstrong or not
+      <input type="text" class="ans" /><br />
+      <button onclick="armstrong()">CHECK</button>
+      <button>CLEAR</button>
+    </form>
+  </body>
+  <script>
+    function armstrong() {
+      p = document.getElementById("num").value;
+      n = parseInt(p);
+      m = n;
+      o = n;
+      let c = 0;
+      while (n > 0) {
+        c++;
+        n = parseInt(n / 10);
+      }
+      let s = 0;
+      while (m > 0) {
+        let f = 1;
+        a = m % 10;
+        for (let i = 1; i <= c; i++) {
+          f = f * a;
+        }
+        s = s + f;
+        m = parseInt(m / 10);
+      }
+      if (o == s) {
+        alert(o + " is the armstrong number");
+      } else {
+        alert(o + " is the not armstrong number");
+      }
+    }
+  </script>
+</html>
