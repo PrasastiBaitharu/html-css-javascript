@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="strong.css" />
+  </head>
+  <body>
+    <form class="sum">
+      <label for="num">Enter Number:</label>
+      <input type="text" class="first" id="num" /><br />
+      Is the number is strong or not
+      <input type="text" class="ans" /><br />
+      <button onclick="strong()">CHECK</button>
+      <button>CLEAR</button>
+    </form>
+  </body>
+  <script>
+    function strong() {
+      p = document.getElementById("num").value;
+      n = parseInt(p);
+      let m = n;
+      let s = 0;
+      while (n > 0) {
+        let f = 1;
+        a = n % 10;
+        for (let i = 1; i <= a; i++) {
+          f = f * i;
+        }
+        s = s + f;
+        n = parseInt(n / 10);
+      }
+      if (m == s) {
+        alert(m + " is the strong number");
+      } else {
+        alert(m + " is not the strong number");
+      }
+    }
+  </script>
+</html>
