@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="factorial.css" />
+  </head>
+  <body>
+    <form class="sum">
+      <label for="num"> Enter Number:</label>
+      <input type="text" class="first" id="num" /><br />
+
+      <input type="text" class="ans" /><br />
+      <button onclick="factorial()">FACTORIAL</button>
+      <button>CLEAR</button>
+    </form>
+  </body>
+  <script>
+    function factorial() {
+      p = document.getElementById("num").value;
+      n = parseInt(p);
+      let f = 1;
+      for (let i = 1; i <= n; i++) {
+        f = f * i;
+      }
+      alert("Factorial is " + f);
+    }
+  </script>
+</html>
