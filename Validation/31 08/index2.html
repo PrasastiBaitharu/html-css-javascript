@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function myFunc(){
+            //alert('Function is working')
+            let txtUser = document.getElementById('username');
+            let msg = document.getElementById('msg');
+            if(txtUser.value === ""){
+                msg.innerHTML = "Please provide some text" ;
+            }
+            else if(txtUser.value.length<3 || txtUser.value.length>30){
+                msg.innerHTML = "Minimum length is 3 and maximum length is 30";
+            }
+            else{
+                msg.innerHTML = txtUser.value;
+            }
+            for(let i=0 ; i<txtUser.value.length ; i++){
+                if(txtUser.value[i]=== " "){
+                    msg.innerHTML = "Spaces are not allowed";
+                }
+            }
+
+
+
+            let password = document.getElementById("password");
+            let msg2 = document.getElementById("msg2");
+            if(password.value.length<6){
+                msg2.innerHTML = "Length of password is less than 6";
+            }
+            else{
+                msg2.innerHTML = password.value;
+            }
+            for(let i=0 ; i<password.value.length ; i++){
+                if(password.value[i]===" "){
+                    msg2.innerHTML = "Spaces are not allowed";
+                }
+            }
+            
+        }
+        </script>
+    <form action="">
+        <div>
+            <label for="username">Name</label>
+            <input type="text" id="username">
+            <span id="msg"></span><br>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password">
+            <span id="msg2"></span><br>
+            <p>Rule: Character Must be of 6 character <br>
+                It must contain 1 small letter 1 capital letter 1 number <br>
+                Spaces are not allowed
+            </p>
+        </div>
+        <input type="button" onclick="myFunc()" value="Click me">
+    </form>
+</body>
+</html>
