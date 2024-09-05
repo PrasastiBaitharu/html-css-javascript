@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <form action="">
+      <h3>Demo Request Form</h3>
+      <div>
+        <label for="username">Name</label><br />
+        <input type="text" id="username" />
+        <span id="msg"></span>
+      </div>
+      <div>
+        <label for="email">Email</label><br />
+        <input type="email" id="email" />
+        <span id="msg2"></span>
+      </div>
+      <div>
+        <label for="phone">Phone</label><br />
+        <input type="number" id="phone" />
+        <span id="msg3"></span>
+      </div>
+      <div>
+        <label for="location">Location</label><br />
+        <input type="text" id="location" list="countries" />
+        <datalist id="countries">
+          <option value="USA"></option>
+          <option value="India"></option>
+          <option value="Japan"></option>
+        </datalist>
+        <span id="msg4"></span>
+      </div>
+      <div>
+        <label for="agent">Number of Agents</label><br />
+        <input type="number" value="1" id="agent" />
+        <span id="msg5"></span>
+      </div>
+      <div>
+        <label for="comment">Additional Comments</label><br />
+        <textarea name="comment" id="comment" rows="1"></textarea>
+        <span id="msg6"></span>
+      </div>
+      <input type="button" value="send" onclick="myFunc()" id="btn" />
+    </form>
+  </body>
+  <script>
+    const myFunc = () => {
+      let name = document.getElementById("username");
+      let msg = document.getElementById("msg");
+      if (name.value == "") {
+        msg.innerHTML = "User name is compulsory";
+      } else if (name.value.length < 3 || name.value.length > 15) {
+        msg.innerHTML = "Minimum length is 3 and maximum length is 15";
+      }else{
+        msg.innerHTML = "";
+      }
+      for (let i = 0; i < name.value.length; i++) {
+        if (name.value[i] === " ") {
+          msg.innerHTML = "Spaces are not allowed";
+        }
+      }
+
+
+      let email = document.getElementById("email");
+      let msg2 = document.getElementById("msg2");
+      if (email.value == "") {
+        msg2.innerHTML = "Email is compulsory";
+      }
+      else if(email.value != "@" && email.value != ".com"){
+        msg2.innerHTML = "Email must contain @ and .com";
+      }
+      else{
+        msg2.innerHTML = "";
+      }
+      for (let i = 0; i < email.value.length; i++) {
+        if (email.value[i] === " ") {
+          msg2.innerHTML = "Spaces are not allowed";
+        }
+      }
+
+
+      let phone = document.getElementById("phone");
+      let msg3 = document.getElementById("msg3");
+      if(phone.value == ""){
+        msg3.innerHTML = "Phone is compulsory";
+      }
+      else if(phone.value.length<10 || phone.value.length>10){
+        msg3.innerHTML = "Phone must be of 10 numbers";
+      }
+      else{
+        msg3.innerHTML = "";
+      }
+      for (let i = 0; i < phone.value.length; i++) {
+        if (phone.value[i] === " ") {
+          msg3.innerHTML = "Spaces are not allowed";
+        }
+      }
+
+
+      let location = document.getElementById("location");
+      let msg4 = document.getElementById("msg4");
+      if(location.value == ""){
+        msg4.innerHTML = "Location is compulsory";
+      }
+      else{
+        msg4.innerHTML = "";
+      }
+
+
+      let agent = document.getElementById("agent");
+      let msg5 = document.getElementById("msg5");
+      if(agent.value == ""){
+        msg5.innerHTML = "Number of agent is compulsory"
+      }
+      else{
+        msg5.innerHTML = "";
+      }
+
+
+      let comment = document.getElementById("comment");
+      let msg6 = document.getElementById("msg6");
+      if(comment.value == ""){
+        msg6.innerHTML = "Number of agent is compulsory"
+      }
+      else{
+        msg6.innerHTML = "";
+      }
+    }
+  </script>
+</html>
