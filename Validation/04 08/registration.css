@@ -1,0 +1,31 @@
+fieldset{
+    width: 30%;
+    margin: 60px auto;
+    background-color: rgb(171, 105, 233);
+    color: whitesmoke;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 30px;
+}
+h1{
+    text-align: center;
+}
+hr{
+    background-color: black;
+    height: 1px;
+}
+label{
+    font-weight: 700;
+    
+}
+input{
+    border: 0;
+    outline: 0;
+    flex: 1;
+}
+div{
+    margin-left: 80px;
+}
+.btn{
+    margin-left: 200px;
+}

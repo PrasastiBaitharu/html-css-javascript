@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            
+            <h1>Student Registration form</h1>
+            <hr>    
+        
+        <div>
+            <label for="name">NAME</label><br>
+            <input type="text" id="name">
+            <span id="msg"></span>
+        </div><br>
+        <div>
+            <label for="father">Father's Name</label><br>
+            <input type="text" id="father">
+            <span id="msg2"></span>
+        </div><br>
+        <div>
+            <label for="mother">Mother's Name</label><br>
+            <input type="text" id="mother">
+            <span id="msg3"></span>
+        </div><br>
+        <div>
+            <label for="phone">Phone no...</label><br>
+            <input type="number" id="phone">
+            <span id="msg4"></span>
+        </div><br>
+        <div>
+            <label for="email">EMAIL</label><br>
+            <input type="email" id="email" name="my email">
+            <span id="msg5"></span>
+        </div><br>
+        <div>
+            <label for="gender">Gender</label><br>
+            <input type="radio" name="gender" id="gender">Male
+            <input type="radio" name="gender" id="gender">Female
+            <input type="radio" name="gender" id="gender">Other
+        </div><br>
+        <div>
+            <label for="dob">Date of Birth</label><br>
+            <input type="date" id="dob">
+            <span id="msg6"></span>
+        </div><br>
+        <div>
+            <label for="addr">Address</label><br>
+            <input type="text" id="addr">
+            <span id="msg7"></span>
+        </div><br>
+        <div>
+            <label for="blood">Blood Group</label><br>
+            <select name="drop-down" id="blood">
+                <option value="A-">A-</option>
+                <option value="A+">A+</option>
+                <option value="B-">B-</option>
+                <option value="B+">B+</option>
+                <option value="AB-">AB-</option>
+                <option value="AB+">AB+</option>
+            </select>
+        </div><br>
+        <div>
+            <label for="dept">Department</label><br>
+            <input type="radio" name="dept">CSE
+            <input type="radio" name="dept">EEE
+            <input type="radio" name="dept">BBA
+        </div><br>
+        <div>
+            <label for="course">Course</label><br>
+            <input type="checkbox">Java
+            <input type="checkbox">C++
+            <input type="checkbox">C
+            <input type="checkbox">WD
+        </div><br>
+        <div>
+            <label for="photo">Photo</label><br>
+            <input type="file" id="photo">
+            <span id="msg8"></span>
+        </div><br>
+        <div class="btn">
+            <input type="button" value="submit" onclick="myFunc()">
+        </div>
+    </fieldset>
+    </form>
+</body>
+<script>
+    function myFunc(){
+        let name = document.getElementById("name");
+      let msg = document.getElementById("msg");
+      if (name.value == "") {
+        msg.innerHTML = "User name is compulsory";
+      } else if (name.value.length < 3 || name.value.length > 15) {
+        msg.innerHTML = "Minimum length is 3 and maximum length is 15";
+      }else{
+        msg.innerHTML = "";
+      }
+      for (let i = 0; i < name.value.length; i++) {
+        if (name.value[i] === " ") {
+          msg.innerHTML = "Spaces are not allowed";
+        }
+      }
+
+
+      let father = document.getElementById("father");
+      let msg2 = document.getElementById("msg2");
+      if (father.value == "") {
+        msg2.innerHTML = "Father name is compulsory";
+      } else if (father.value.length < 3 || father.value.length > 15) {
+        msg2.innerHTML = "Minimum length is 3 and maximum length is 15";
+      }else{
+        msg2.innerHTML = "";
+      }
+      for (let i = 0; i < father.value.length; i++) {
+        if (father.value[i] === " ") {
+          msg2.innerHTML = "Spaces are not allowed";
+        }
+      }
+
+
+      let mother = document.getElementById("mother");
+      let msg3 = document.getElementById("msg3");
+      if (mother.value == "") {
+        msg3.innerHTML = "Mother name is compulsory";
+      } else if (mother.value.length < 3 || mother.value.length > 15) {
+        msg3.innerHTML = "Minimum length is 3 and maximum length is 15";
+      }else{
+        msg3.innerHTML = "";
+      }
+      for (let i = 0; i < mother.value.length; i++) {
+        if (mother.value[i] === " ") {
+          msg3.innerHTML = "Spaces are not allowed";
+        }
+      }
+
+
+      let phone = document.getElementById("phone");
+      let msg4 = document.getElementById("msg4");
+      if(phone.value == ""){
+        msg4.innerHTML = "Phone is compulsory";
+      }
+      else if(phone.value.length<10 || phone.value.length>10){
+        msg4.innerHTML = "Phone must be of 10 numbers";
+      }
+      else{
+        msg4.innerHTML = "";
+      }
+      for (let i = 0; i < phone.value.length; i++) {
+        if (phone.value[i] === " ") {
+          msg4.innerHTML = "Spaces are not allowed";
+        }
+      }
+
+
+      let email = document.getElementById("email");
+      let msg5 = document.getElementById("msg5");
+      if (email.value == "") {
+        msg5.innerHTML = "Email is compulsory";
+      }
+      else if(email.value != "@" && email.value != ".com"){
+        msg5.innerHTML = "Email must contain @ and .com";
+      }
+      else{
+        msg5.innerHTML = "";
+      }
+      for (let i = 0; i < email.value.length; i++) {
+        if (email.value[i] === " ") {
+          msg5.innerHTML = "Spaces are not allowed";
+        }
+      }
+
+
+      let dob = document.getElementById("dob");
+      let msg6 = document.getElementById("msg6");
+      if(dob.value == ""){
+        msg6.innerHTML = "Date of birth is compulsory";
+      }
+
+
+      let addr = document.getElementById("addr");
+      let msg7 = document.getElementById("msg7");
+      if(addr.value == ""){
+        msg7.innerHTML = "Date of birth is compulsory";
+      }
+
+      let photo = document.getElementById("photo");
+      let msg8 = document.getElementById("msg8");
+      if(photo.value == ""){
+        msg8.innerHTML = "Photo is compulsory"
+      }
+    }
+</script>
+</html>
