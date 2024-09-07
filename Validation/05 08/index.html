@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <label for="username">Username</label>
+      <input type="text" id="username" />
+      <span id="msg"></span>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" id="password" />
+      <span id="msg2"></span>
+    </div>
+    <button type="submit" onclick="myFunc()">Submit</button>
+    <button onclick="ptnclear()">Clear</button>
+  </body>
+  <script>
+    function myFunc() {
+      let user = document.getElementById("username");
+      let msg = document.getElementById("msg");
+      if (user.value == "") {
+        msg.innerHTML = "Username is compulsory";
+        msg.style.color = "Red";
+      } else if (user.value.length < 3 || user.value.length > 15) {
+        msg.innerHTML = "Minimum length is 3 and maximum length is 15";
+        msg.style.color = "Red";
+      }
+      else{
+        msg.innerHTML = "Username is Valid";
+        msg.style.color = "Green";
+      }
+      for (let i = 0; i < user.value.length; i++) {
+        if (user.value[i] === " ") {
+          msg.innerHTML = "Spaces are not allowed";
+          msg.style.color = "Red";
+        }
+      }
+
+      let password = document.getElementById("password");
+      let msg2 = document.getElementById("msg2");
+      if (password.value == "") {
+        msg2.innerHTML = "Password is compulsory";
+        msg2.style.color = "Red";
+      } else if (password.value.length < 6) {
+        msg2.innerHTML = "Length of password is less than 8";
+        msg2.style.color = "Red";
+      }else{
+        msg2.innerHTML = "Password is Valid";
+        msg2.style.color = "Green";
+      }
+      for (let i = 0; i < password.value.length; i++) {
+        if (password.value[i] === " ") {
+          msg2.innerHTML = "Spaces are not allowed";
+          msg.style.color = "Red";
+        }
+      }
+    }
+
+    function ptnclear() {
+      document.getElementById("username").value = "";
+      document.getElementById("password").value = "";
+    }
+  </script>
+</html>
