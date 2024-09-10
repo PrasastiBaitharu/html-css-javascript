@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="sum-factor.css" />
+  </head>
+  <body>
+    <form class="sum">
+      <label for="num"> Enter Number:</label>
+      <input type="text" class="first" id="num" /><br />
+      Display sum of factor
+      <input type="text" class="ans" /><br />
+      <button onclick="sum_factor()">SUM OF FACTOR</button>
+      <button>CLEAR</button>
+    </form>
+  </body>
+  <script>
+    function sum_factor() {
+      p = document.getElementById("num").value;
+      n = parseInt(p);
+      let s = 0;
+      for (let i = 1; i <= n; i++) {
+        if (n % i == 0) {
+          s = s + i;
+        }
+      }
+      alert("Sum of Factors is " + s);
+    }
+  </script>
+</html>
