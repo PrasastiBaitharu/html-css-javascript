@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div style="display: flex; ">
+            <h1>Enter first number:</h1>
+            <input type="number" id="first" style="width: 50px; height: 40px; margin-top: 20px;">
+        </div>
+        <div style="display: flex;">
+            <h1>Enter second number:</h1>
+            <input type="number" id="second" style="width: 50px; height: 40px; margin-top: 20px;">
+        </div>
+        <button onclick="sum()">sum</button>
+        <button onclick="clear()">clear</button>
+        <h1 id="result"></h1>
+    </form>
+</body>
+<script>
+    function sum(){
+        let a = document.getElementById("first")
+        let b = document.getElementById("second")
+        let s = parseInt(a.value) +parseInt( b.value);
+        alert(s);
+        document.getElementById("result").textContent = s
+    }
+    function clear(){
+        let a = document.getElementById("first").value = "";
+        let b = document.getElementById("second").value = "";
+    }
+</script>
+</html>
