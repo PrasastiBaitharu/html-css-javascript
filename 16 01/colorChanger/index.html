@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="box"></div>
+    <button onclick="green()">Green</button>
+    <button onclick="blue()">Blue</button>
+    <button onclick="red()">Red</button>
+    <button onclick="pink()">Pink</button>
+    <button onclick="black()">Black</button>
+
+    <script>
+        let box = document.getElementById("box")
+
+        function green(){
+            box.style.backgroundColor = "green"
+        }
+        function blue(){
+            box.style.backgroundColor = "blue"
+        }
+        function red(){
+            box.style.backgroundColor = "red"
+        }
+        function pink(){
+            box.style.backgroundColor = "pink"
+        }
+        function black(){
+            box.style.backgroundColor = "black"
+        }
+    </script>
+</body>
+</html>
