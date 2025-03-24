@@ -1,0 +1,17 @@
+body{
+    
+    width: 100%;
+}
+
+h1{
+    border: 1px solid black;
+    width: 10%;
+    height: 14vh;
+    overflow-x: scroll;
+}
+button{
+    margin: 10px auto;
+}
+.btn{
+    padding: 7px;
+}
