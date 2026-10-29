@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Login | Cara</title>
+  </head>
+  <body>
+    <main class="login">
+      <h1>Login</h1>
+      <form id="login-form">
+        <label for="username">Name</label>
+        <input
+          type="text"
+          placeholder="Name"
+          name="username"
+          id="username"
+          required
+        />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          placeholder="Email"
+          name="email"
+          id="email"
+          required
+        />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+          id="password"
+          required
+        />
+        <button class="blue" type="submit">Login</button>
+      </form>
+      <p class="auth-notice">
+        Demo only: your details are saved in this browser and are not secure.
+      </p>
+    </main>
+    <script src="auth.js"></script>
+  </body>
+</html>
